@@ -25,7 +25,12 @@ In particular, it may be intuitive that taking an absolute path and joining a re
 
 This repository contains a Rust program whose code is in [`src/main.rs`](src/main.rs), and a Python program whose code is at [`main.py`](main.py), that print some information about the results on Windows of taking the absolute path `C:\foo` and joining `C:bar` or `D:bar` to it.
 
-As shown below, the Rust code is built with Rust 1.80.1, while the Python code is run in interpreters up from 3.8 up to 3.13 RC 1.
+For the results below:
+
+- All the examples below were run on Windows 10 (10.0.19045), though the Windows version probably does not matter, especially since the filesystem is not actually accessed to do the joining.
+- The Rust code was built with Rust 1.80.1.
+- The Python code was run in interpreters up from 3.8 up to 3.13 RC 1.
+- Note how, in some versions of Python, the behavior differs between `Path` (which `oop` uses) and `os.path.join` (which `classic` uses).
 
 ```text
 C:\Users\ek\source\repos\pathjoin [main]> cargo run
